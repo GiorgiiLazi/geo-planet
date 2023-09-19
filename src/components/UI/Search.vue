@@ -1,12 +1,12 @@
 <template>
   <div class="wrapper">
     <label for="input1"></label>
-    <input @change="emitInput" @keyup.enter="emitInput" v-model="input" type="text" name="" id="input1" placeholder="Search for a country">
+    <input @keyup.enter="changeInput" v-model="input" type="text" name="" id="input1" placeholder="Search for a country">
 
-    <select @change="emitSelect" name="" v-model="selected" id="">
+    <select @change="changeSelected"  v-model="selected">
         <option disabled value="filter">Filter by Region</option>
         <option value="africa">Africa</option>
-        <option value="america">America</option>
+        <option value="americas">Americas</option>
         <option value="asia">Asia</option>
         <option value="europe">Europe</option>
         <option value="oceania">Oceania</option>
@@ -24,12 +24,13 @@ export default {
         }
     },
     methods:{
-        emitInput(){
-            
+        changeSelected(){
+            this.$emit('changeSelected', this.selected)
         },
-        emitSelect(){
-
+        changeInput(){
+            this.$emit('changeInput', this.input)
         }
+        
     }
 
 }
@@ -43,6 +44,8 @@ export default {
     width: 100%;
     max-height: 50px;
     padding: 20px;
+    padding-top: 100px;
+    margin-bottom: 100px;
 }
 input{
  width: 20vw;

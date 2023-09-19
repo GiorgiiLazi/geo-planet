@@ -16,11 +16,16 @@ export default {
 
 <style>
 .nav-bar{
+    position:fixed;
+    z-index: 3;
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     padding: 20px;
-    background-color: rgba(0,0,0,0.4)
+    margin: auto;
+    background-color: rgba(0,0,0,0.4);
+    color: white
 }
 a{
     color: white;
