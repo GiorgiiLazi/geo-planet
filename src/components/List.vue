@@ -2,17 +2,23 @@
   <Search @changeSelected="selected($event)" @changeInput="input($event)" />
   <div class="list-wrapper">
     <transition-group
-    v-if="list.lenght != 0" 
+    v-if="list.lenght =! 0" 
     @before-enter="beforeEnter"
     @enter="enter" 
     tag="ul" 
     appear>
-        <li class="list-item" v-for="(li, index) in list" :key="li.idd" :data-index="index">
-            <div><img :src="li.flags.png" :alt="li.flags.alt"></div>
+        <li style="background-color:lightgrey" class="list-item" v-for="(li, index) in list" :key="li.idd" :data-index="index">
+            <div>
+                <img :src="li.flags.png" :alt="li.flags.alt">
+            </div>
             <div class="text-wrapper">
                 <h1>{{li.name.common}}</h1>
-                <p><strong>Population:</strong> {{li.population.toLocaleString()}}</p>
-                <p><strong>Region: </strong>{{li.region}}, {{li.subregion}}</p>
+                <p>
+                    <strong>Population:</strong> 
+                    <br> 
+                    {{li.population.toLocaleString()}}
+                </p>
+                <p><strong>Region: </strong>{{li.subregion}}</p>
             </div>
         </li>
     </transition-group>
@@ -105,9 +111,9 @@ export default {
 }
 .list-item img{
     border-radius: 8px;
-    width: 100%;
-    height: 100%;
-    max-width: 320px;
+    width: 150px;
+    height: 100px;
+    max-width: 150px;
 }
 h1{
     font-size: 20px;
