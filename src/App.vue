@@ -16,16 +16,20 @@ export default {
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;500&display=swap');
 body{
+  table-layout:fixed;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Montserrat, sans-serif;
+  overflow-x: hidden;
 }
 .dark{
   background: rgb(80,7,105);
   background: linear-gradient(90deg, rgba(80,7,105,1) 37%, rgba(2,0,36,1) 100%, rgba(98,9,121,1) 100%);
 }
 .bright{
-  background-color:darkturquoise
+  background-image: linear-gradient(to left bottom, #fffb00, #ff9e00, #ff0051, #ff00ac, #0003ff);
+  
 }
 
 </style>

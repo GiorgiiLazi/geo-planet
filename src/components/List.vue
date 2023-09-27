@@ -47,7 +47,7 @@ export default {
                 opacity:1,
                 duration: 0.8,
                 onComplete: done,
-                delay: el.dataset.index * 0.07
+                delay: el.dataset.index * 0.02
             })
         }
 
@@ -87,6 +87,7 @@ export default {
 .list-wrapper{
     display: flex;
     justify-content: center;
+    
 }
 .list-wrapper ul{
     padding: 0;
@@ -102,21 +103,33 @@ export default {
     align-items: center;
     list-style: none;
     background-color: rgb(249, 242, 242);
-    max-width: 150px;
+    max-width: 200px;
     max-height: 300px;
     border-radius: 8px;
 }
 .text-wrapper{
     padding: 0 20px;
+    font-size: 14px;
 }
 .list-item img{
     border-radius: 8px;
-    width: 150px;
+    width: 200px;
     height: 100px;
-    max-width: 150px;
+    max-width: 200px;
 }
 h1{
     font-size: 20px;
 }
+@media only screen and (max-width: 450px){
+    
+    .list-wrapper ul{
+    grid-template-columns: 1fr
+    }
+    
+}
+
+    
+
+
 
 </style>

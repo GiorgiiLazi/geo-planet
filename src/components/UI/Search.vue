@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    <label for="input1"></label>
+    
     <input @keyup.enter="changeInput" v-model="input" type="text" name="" id="input1" placeholder="Search for a country">
 
     <select @change="changeSelected"  v-model="selected">
@@ -44,15 +44,27 @@ export default {
     width: 100%;
     max-height: 50px;
     padding: 20px;
-    padding-top: 100px;
+    margin-top: 30vh;
     margin-bottom: 100px;
 }
 input{
- width: 20vw;
+ width: 400px;
  padding: 5px;
 }
 select{
     padding: 5px;
+}
+@media only screen and (max-width: 450px){
+    
+    .wrapper{
+    flex-direction: column;
+    justify-content:space-between ;
+    }
+    .wrapper *{
+        margin: 5px;
+        width: 200px;
+    }
+    
 }
 
 </style>
