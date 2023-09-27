@@ -1,12 +1,18 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Countries from '../views/Countries.vue'
 import Quiz from '../views/Quiz.vue'
+import About from '../views/About.vue'
 
 const routes = [
   {
-    path: '/',
+    path: '/countries',
     name: 'countries',
     component: Countries
+  },
+  {
+    path: '/',
+    name: 'about',
+    component: About
   },
   {
     path: '/quiz',

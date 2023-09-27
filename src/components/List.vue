@@ -10,8 +10,7 @@
         <li style="background-color:lightgrey" class="list-item" v-for="(li, index) in list" :key="li.idd" :data-index="index">
             <div>
                 <img :src="li.flags.png" :alt="li.flags.alt">
-            </div>
-            <div class="text-wrapper">
+                <div class="text-wrapper">
                 <h1>{{li.name.common}}</h1>
                 <p>
                     <strong>Population:</strong> 
@@ -20,6 +19,8 @@
                 </p>
                 <p><strong>Region: </strong>{{li.subregion}}</p>
             </div>
+            </div>
+            
         </li>
     </transition-group>
     <div v-else>
@@ -119,6 +120,11 @@ export default {
 }
 h1{
     font-size: 20px;
+}
+.list-wrapper  :hover{
+    position: relative;
+    top: -4px;
+
 }
 @media only screen and (max-width: 450px){
     

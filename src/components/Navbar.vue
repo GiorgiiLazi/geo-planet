@@ -1,12 +1,13 @@
 <template>
-<transition tag="div" name="nav-wrap" appear>
-  <nav class="nav-bar">
+<transition  tag="div" name="nav-wrap" appear>
+  <nav class="nav-bar" @click="panelOpen =! panelOpen">
     <div class="logo">
       <img src="@/assets/logo.png" alt="">
       <span class="logo">Geoplanet</span>
     </div>
     
-    <router-link to="/">Countries</router-link>
+    <router-link to="/">About</router-link>
+    <router-link to="/countries">Countries</router-link>
     <router-link to="/quiz">Quiz</router-link>
     <transition tag="div" name="sun" class="toggleSun" >
       <span v-if="!darkMode" style="color:yellow" @click="changeDark" class="material-icons">
@@ -18,7 +19,7 @@
     </transition>
   </nav>
 </transition>
-  
+
   <router-view/>
 </template>
 
@@ -26,7 +27,8 @@
 export default {
   data(){
     return{
-      darkMode: false
+      darkMode: false,
+      panelOpen: true
     }
   },
   mounted(){
@@ -140,7 +142,7 @@ a{
   }
   .nav-bar *{
     margin: 0;
-    padding: 10px 15px;
+    padding: 5px 15px;
   }
   .logo{
   display: flex;
