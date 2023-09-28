@@ -130,6 +130,25 @@ a{
   transition: all 1s ease
 }
 
+/* route transitions */
+
+.routes-enter-from{
+  opacity: 0;
+  transform: translateX(100px)
+}
+.routes-enter-active{
+  transition: all 0.3s ease-out 
+}
+.routes-leave-to{
+  opacity: 0;
+  transform: translateX(-100px)
+}
+.routes-leave-active{
+  transition: all 0.3s ease-in 
+}
+
+/* dynamic styles */
+
 @media screen and (max-width: 400px){
   .nav-bar{
     flex-direction: column;
