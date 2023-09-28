@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper">
     
-    <input @keyup.enter="changeInput" v-model="input" type="text" name="" id="input1" placeholder="Search for a country">
+    <input @keydown.enter="changeInput" v-model="input" type="text" name="" id="input1" placeholder="Search for a country">
 
     <select @change="changeSelected"  v-model="selected">
         <option disabled value="filter">Filter by Region</option>
